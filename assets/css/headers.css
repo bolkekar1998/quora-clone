@@ -1,0 +1,41 @@
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+
+body{
+    height: 70px;
+    border-bottom: 1px gray solid;
+    background-color: white;
+    margin-bottom: 0;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+
+.heading{
+    color: darkred;
+    margin: 0;
+}
+
+a{
+    color: darkred;
+}
+
+li button{
+    background-color: darkred;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    height: 30px;
+    width: 150px;
+}
+
+select{
+  border: none;
+  background: transparent;
+  width: 15px;
+  color: darkred;
+}
+

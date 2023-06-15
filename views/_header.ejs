@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/css/headers.css">
+<header>
+        <% if (locals.user){ %>
+            <ul style="list-style: none;">
+            <li>
+                <h2 class="heading">Quora</h2>
+            </li>
+            <li>
+                <a href="/"><i class="fa-solid fa-house" style="font-size:30px;"></i></a>
+            </li>
+            <li>
+                <a href=""><i class="fa-sharp fa-solid fa-pen-to-square" style="font-size:30px;"></i></a>
+            </li>
+            <li>
+                <i class="fa-solid fa-user" style="font-size:30px; color: darkred;">
+                    <select name="Setting" onchange="location = this.value;">
+                        <option value="">
+                        </option>
+                        <option value="/users/profile">
+                            Profile
+                        </option>
+                        <option value="/users/sign-out">
+                            Sign Out
+                        </option>
+                    </select>    
+                </i>
+            </li>
+        </ul>
+        <% }else{ %>
+            <ul style="list-style: none;">
+                <li>
+                    <h2 class="heading">Quora</h2>
+                </li>
+                <li>
+                    <a href="/"><i class="fa-solid fa-house" style="font-size:30px;"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fa-sharp fa-solid fa-pen-to-square" style="font-size:30px;"></i></a>
+                </li>
+                <li>
+                <a href="/users/signin">Sign In</a>
+                </li>
+            </ul>
+        <% } %>
+    
+</header>

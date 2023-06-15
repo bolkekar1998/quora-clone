@@ -1,0 +1,182 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background: url(/images/quorafirstimg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 500px;
+    width: 550px;
+    border: 1px black solid;
+    background-color: white;
+    margin: 0;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    color: darkred;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    color: lightslategray;
+}
+
+.signinoptions{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.socialsign{
+    height: 300px;
+    width: 49%;
+    border-right: 1px lightgray solid;
+}
+
+.manual{
+    height: 300px;
+    width: 50%;
+    padding: 20px;
+}
+.loghead{
+    font-weight: bold;
+    border-bottom: 1px lightgray solid;
+}
+
+.form{
+    height: 200px;
+    font-weight: bold;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+input{
+    height: 40px;
+    width: 250px;
+}
+
+.button{
+    margin-left: 150px;
+    margin-bottom: 20px;
+    background-color: skyblue;
+    color: white;
+    border-radius: 25px;
+    height: 40px;
+    width: 80px;
+    border: none;
+}
+
+.footer{
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    background-color: lightgray;
+    border-top: 1px grey solid;
+    margin-top: 20;
+
+}
+
+.signup{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.open-button{
+    height: 20px;
+    width: 220px;
+    border-radius: 10px;
+    background-color: white;
+    border: none;
+}
+
+.open-button:hover{
+    background-color: darkgray;
+}
+
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  height: 300px;
+  position: fixed;
+  border: 1px solid #f1f1f1;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+    margin-left: 150px;
+    margin-bottom: 20px;
+    background-color: skyblue;
+    color: white;
+    border-radius: 25px;
+    height: 40px;
+    width: 80px;
+    border: none;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.form-container .btncancel {
+    background-color: red;
+    height: 20px;
+    width: 20px;
+    margin-left: 50px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signup{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.signup p a{
+    margin-left: 50px;
+    overflow: hidden;
+}
+

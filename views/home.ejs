@@ -1,0 +1,81 @@
+<%- include('_header'); %>
+<link rel="stylesheet" href="/css/home.css">
+<div class="container">
+  <div class="space"></div>
+    <div class="post">
+      <div class="input">
+        <div class="input box">
+          <%if (locals.user) {%>
+            <form action="/posts/create" id="new-post-form" method="POST">
+                <textarea name="content" cols="30" rows="1" placeholder="Type Here..." required></textarea>
+                <input class="btn" type="submit" value="Post">
+            </form>
+            <%}%>
+        </div> 
+      </div>
+      <%for (post of posts){%>
+      <div class="posts">
+        <div class="post1">
+          <div class="left">
+            <div class="post-heading"><%=post.user.email%></div>
+            <div class="follow">Follow</div>
+          </div>
+          <div class="right">
+            <div>
+              <% if (locals.user && locals.user.id == post.user.id){ %> 
+              <a href="/posts/destroy/<%=post.id%>">
+                <i class="fa-sharp fa-solid fa-trash"></i>
+              </a>
+              <%} %>
+            </div>
+          </div>
+        </div>
+        <div class="post2">
+          <div class="author">
+            <div class="time">
+              <p><%= post.user.lastModified %></p>
+            </div>
+          </div>
+        </div>
+        <div class="post3">
+          <div class="question">
+            <p><%=post.content%></p>
+          </div>
+        </div>
+        <%if (locals.user) {%>
+        <div class="icons">
+          <a class="toggle-like-button upvote" data-likes="<%= post.likes.length %>" href="/likes/toggle/?id=<%=post._id%>&type=Post">
+            <i class="fa-solid fa-thumbs-up"></i><%= post.likes.length %> Likes
+          </a>
+            <div class="downvote"><i class="fa-solid fa-thumbs-down"></i><p>Dislike</p></div>
+        </div>
+        <div class="comment">
+          <% if (locals.user) { %>
+            <form action="/comments/create" method="POST">
+              <input type="text" name="content" placeholder="Type here to add comment..." required>
+              <!-- need to send post id of comment at which I need to add comment -->
+              <input type="hidden" name="post" value="<%=post._id%>">
+              <input type="submit" class="button" value="Add Comment">
+            </form>
+        <%}%>
+        </div>
+        <%}%>
+        <div class="post-comments-list" id="post-comments-<%=post._id%>">
+          <%for(comment of post.comments) {%>
+              <p>
+                  <%= comment.content%>
+                  <br>
+                  <small>
+                      <%= comment.user.email%>
+                  </small>
+              </p>
+          <%}%>
+  </div>
+        </div>
+        <%}%>
+      </div>
+    </div>
+  <div class="feeds"></div>
+</div>
+
+        

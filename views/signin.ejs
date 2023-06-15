@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="/css/signin.css">
+<div class="container">
+    <div class="heading">
+        <h1>Quora</h1>
+    </div>
+    <div class="title">
+        <p>A place to share knowledge and better understand the world</p>
+    </div>
+    <div class="signinoptions">
+        <div class="socialsign">
+            <div class="signup">
+                <p>
+                    <a href="/users/auth/google">Sign In/Up With Google</a>
+                </p>
+                <button class="open-button" onclick="openForm()">Sign Up with Email</button>
+                <div class="form-popup" id="myForm">
+                    <form action="/users/create" class="form-container" method="POST">
+                      <div class="header">
+                        <h1>Sign Up</h1>
+                        <button type="button" class="btncancel" onclick="closeForm()">X</button>
+                      </div>
+                      <label for="email"><b>Email</b></label>
+                      <input type="text" placeholder="Enter Email" name="email" required>
+                  
+                      <label for="psw"><b>Password</b></label>
+                      <input type="password" placeholder="Enter Password" name="password" required>
+                  
+                      <button type="submit" class="btn">Sign Up</button>
+                    </form>
+                  </div> 
+            </div>
+                         
+        </div>
+        <div class="manual">
+            <div class="loghead">
+                <p>Login</p>
+            </div>
+            <div class="form">
+                <form action="/users/create-session" method="POST">
+                    <label>Email</label><br>
+                    <input name="email" type="email" placeholder="Email" required><br>
+                    <label >Password</label><br>
+                    <input name="password" type="password" placeholder="Password" required><br>
+                    <button class = "button" type="submit">Log In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© Quora, Inc. 2022</p>
+    </div>
+</div>
+
+<script src="/js/script.js"></script>
